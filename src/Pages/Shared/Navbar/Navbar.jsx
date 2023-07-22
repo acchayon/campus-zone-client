@@ -10,7 +10,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-white via-blue-500 to-blue-800 p-4">
+    <nav className="bg-gradient-to-r from-white via-blue-500 to-blue-800 p-4 navbar fixed z-10 bg-opacity-30 max-w-screen-xl">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <img
