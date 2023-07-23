@@ -1,6 +1,7 @@
 
 
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gradient-to-r from-white via-blue-500 to-blue-800 p-4 navbar fixed z-10 bg-opacity-30 max-w-screen-xl">
+    <nav className="bg-gradient-to-r from-white via-blue-500 to-blue-800 p-4 navbar fixed z-10 bg-opacity-30 lg:max-w-screen-xl">
       <div className="container mx-auto flex items-center justify-between">
         <div className="flex items-center">
           <img
@@ -37,18 +38,20 @@ const Navbar = () => {
         </button>
         {/* Desktop menu */}
         <div className={`hidden md:flex space-x-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-          <a href="#" className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Home</a>
-          <a href="#" className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</a>
-          <a href="#" className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:-translate-x-2 hover:translate-y-2">Admission</a>
-          <a href="#" className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:skew-y-3">My Colleges</a>
+          <Link to='/' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Home</Link>
+          <Link to='/' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</Link>
+          <Link to='/' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:-translate-x-2 hover:translate-y-2">Admission</Link>
+          <Link to='/' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:skew-y-3">My Colleges</Link>
+          <Link to='/login' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:skew-y-3">Login</Link>
         </div>
       </div>
       {/* Mobile menu */}
       <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
-        <a href="#" className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Home</a>
-        <a href="#" className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</a>
-        <a href="#" className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:-translate-x-2 hover:translate-y-2">Admission</a>
-        <a href="#" className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:skew-y-3">My Colleges</a>
+        <Link to='/' className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Home</Link>
+        <Link to='/' className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</Link>
+        <Link to='/' className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:-translate-x-2 hover:translate-y-2">Admission</Link>
+        <Link to='/' className="block text-black hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:skew-y-3">My Colleges</Link>
+        <Link to='/login' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:skew-y-3">Login</Link>
       </div>
     </nav>
   );
