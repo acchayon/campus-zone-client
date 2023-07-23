@@ -1,5 +1,5 @@
 import Lottie from 'react-lottie';
-import animationData from '../../../../public/animation_lke48mzu.json'
+import animationData from '../../../../public/animation_lkexbhhm.json'
 
 
 const About = () => {

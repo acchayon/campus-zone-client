@@ -9,7 +9,7 @@ const CollegeItem = ({ item }) => {
     } = item;
 
     return (
-        <div className="relative w-96 h-96 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
+        <div className="relative w-full h-96 rounded-lg overflow-hidden shadow-lg transform hover:scale-105 transition-transform duration-300">
             <img className="w-full h-56 object-cover" src={collegePic} alt="College Image" />
             <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-80"></div>
             <div className="absolute bottom-0 left-0 p-4">
