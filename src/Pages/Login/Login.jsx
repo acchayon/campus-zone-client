@@ -1,8 +1,13 @@
 import Lottie from 'react-lottie';
 import animationData from '../../../public/login.json'
+import { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
+import { Link } from 'react-router-dom';
 
 
 const Login = () => {
+    const { signUser } = useContext(AuthContext)
+
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
@@ -10,7 +15,15 @@ const Login = () => {
         const password = form.password.value;
         console.log(email, password);
 
+        signUser(email, password)
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+
     }
+
+    
 
     const defaultOptions = {
         loop: true,
@@ -51,6 +64,9 @@ const Login = () => {
                             <input className="btn btn-primary" type="submit" value="Login" />
                         </div>
                     </form>
+                    <div className='text-center mb-3'>
+                    <p>New Here? <Link to='/signup'>Register Now</Link></p>
+                    </div>
                 </div>
             </div>
         </div>
