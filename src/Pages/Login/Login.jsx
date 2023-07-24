@@ -2,11 +2,16 @@ import Lottie from 'react-lottie';
 import animationData from '../../../public/login.json'
 import { useContext } from 'react';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
-    const { signUser } = useContext(AuthContext)
+    const { signUser } = useContext(AuthContext);
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const from = location.state?.from?.pathname || "/";
 
     const handleLogin = (event) => {
         event.preventDefault();
@@ -19,6 +24,14 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'User Login Successfully',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              navigate(from, { replace: true });
         })
 
     }
