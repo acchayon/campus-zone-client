@@ -5,7 +5,7 @@ const CollegesPage = () => {
     const [allColleges, setAllColleges] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/college")
+        fetch("https://campus-zone-server-acchayon.vercel.app/college")
         .then(res => res.json())
         .then(data => {
             setAllColleges(data)

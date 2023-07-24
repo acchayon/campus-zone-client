@@ -33,8 +33,8 @@ import CollegeDetails from "../Pages/CollegeDetails/CollegeDetails";
         },
         {
           path: '/collegespage/:id',
-          element: <CollegeDetails></CollegeDetails>,
-          loader: ({params}) => fetch(`http://localhost:5000/college/${params.id}`)
+          element: <PrivateRoute><CollegeDetails></CollegeDetails></PrivateRoute>,
+          loader: ({params}) => fetch(`https://campus-zone-server-acchayon.vercel.app/college/${params.id}`)
         }
       ]
     },
