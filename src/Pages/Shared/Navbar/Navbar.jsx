@@ -50,7 +50,7 @@ const Navbar = () => {
                 {/* Desktop menu */}
                 <div className={`hidden md:flex space-x-4 ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
                     <Link to='/' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Home</Link>
-                    <Link to='/collegesPage' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</Link>
+                    <Link to='/collegespage' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</Link>
                     <Link to='/' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:-translate-x-2 hover:translate-y-2">Admission</Link>
                     <Link to='/' className="text-white hover:text-blue-300 transition duration-300 ease-in-out transform hover:skew-y-3">My Colleges</Link>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
             {/* Mobile menu */}
             <div className={`md:hidden ${isMobileMenuOpen ? 'block' : 'hidden'}`}>
                 <Link to='/' className="block text-white hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Home</Link>
-                <Link to='/collegesPage' className="block text-white hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</Link>
+                <Link to='/collegespage' className="block text-white hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:rotate-3">Colleges</Link>
                 <Link to='/' className="block text-white hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:-translate-x-2 hover:translate-y-2">Admission</Link>
                 <Link to='/' className="block text-white hover:text-blue-300 p-2 transition duration-300 ease-in-out transform hover:skew-y-3">My Colleges</Link>
                 {user ? <>
